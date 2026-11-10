@@ -5,211 +5,391 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bubusuk menu — sizzling classics and hearty Kapampangan comfort food.">
+  <link rel="icon" type="image/svg+xml" href="images-logo/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="images-logo/circlelogo.png">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/ljp4qpl.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+
   <!-- custom.css -->
   <link rel="stylesheet" href="custom.css">
-
-  <!-- Adobe Font -->
-  <link rel="stylesheet" href="https://use.typekit.net/ljp4qpl.css">  
 
   <title>Menu - bubusuk</title>
 
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-sm custom-navbar">
-  <div class="container-fluid">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md site-nav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images-logo/logo1.png" alt="bubusuk">
+    </a>
 
-   <a class="navbar-brand" href="index.html">bubusuk</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="aboutus.html">ABOUT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="services.html">SERVICES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="menu.html">MENU</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">CONTACT</a>
-        </li>
+      <ul class="navbar-nav ms-auto align-items-md-center">
+        <li class="nav-item"><a class="nav-link" href="aboutus.html">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="menu.html">MENU</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
       </ul>
+      <a href="contact.html" class="btn-brand nav-cta">Reserve</a>
     </div>
-
   </div>
 </nav>
 
 <!-- MENU CONTENT -->
 <main class="menu-page">
-  <!-- Header Section -->
-  <section class="our-menu">
-    <div class="container menu-content">
-      <h2>Our Menu</h2>
-      <h1>
-        <span class="menu-heart">Authentic</span>
-        <span class="menu-span">Kapampangan</span>
-        <span class="menu-heart">Dishes</span>
+
+  <!-- Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow">Our Menu</span>
+      <h1 class="page-title">
+        Come <span class="accent">Dine</span> With Us
       </h1>
-      <p>
-        Every dish at Bubusuk is made fresh daily using time-honored Kapampangan recipes. From sizzling classics to hearty comfort food, our menu brings the true flavors of Pampanga straight to your table at prices everyone can enjoy.
+      <p class="page-lead">
+        Every dish at Bubusuk is made fresh daily using time-honored recipes. From sizzling classics to hearty comfort food, our menu brings the true manyaman flavors straight to your table at prices everyone can enjoy.
       </p>
     </div>
   </section>
 
-  <!-- Foods Section -->
-  <section class="menu-section">
-    <div class="container menu-content">
-      <p class="category-label">bubusuk signatures</p>
-      <h2 class="category-title">
-        <span class="menu-heart">Most</span>
-        <span class="menu-span">Ordered</span>
-      </h2>
-      <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+  <!-- Customer Favorites -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Bubusuk signatures</span>
+        <h2 class="section-title">Customer <span class="accent">Favorites</span></h2>
+        <p class="section-lead">Tap a dish to take a closer look.</p>
+      </div>
 
-        <div class="col">
-         <div class="card menu-card h-100">
-           <img src="menu/pares.jpg" class="card-img-top menu-card-img" alt="Beef">
-             <div class="card-body menu-card-body">
-              <h5 class="card-title menu-item-name">Beef Pares</h5>
-              <p class="menu-item-price">₱ 365</p>
-           </div>
-          </div>
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-md-4">
+
+        <div class="col reveal">
+          <button type="button" class="dish-card" data-bs-toggle="modal" data-bs-target="#modalSisig">
+            <img src="menu/sisig.jpg" alt="Sisig">
+            <span class="dish-card-body">
+              <span class="dish-card-name">Sisig</span>
+              <span class="dish-card-hint">View photo +</span>
+            </span>
+          </button>
         </div>
 
-        <div class="col">
-         <div class="card menu-card h-100">
-           <img src="menu/palabok.jpg" class="card-img-top menu-card-img" alt="palabok">
-             <div class="card-body menu-card-body">
-              <h5 class="card-title menu-item-name">Pancit Palabok</h5>
-              <p class="menu-item-price">₱ 120</p>
-           </div>
-          </div>
+        <div class="col reveal reveal-delay-1">
+          <button type="button" class="dish-card" data-bs-toggle="modal" data-bs-target="#modalPancit">
+            <img src="menu/pancitbihon.jpg" alt="Pancit Bihon">
+            <span class="dish-card-body">
+              <span class="dish-card-name">Pancit Bihon</span>
+              <span class="dish-card-hint">View photo +</span>
+            </span>
+          </button>
         </div>
 
-        <div class="col">
-         <div class="card menu-card h-100">
-           <img src="menu/sisig.jpg" class="card-img-top menu-card-img" alt="sisig">
-             <div class="card-body menu-card-body">
-              <h5 class="card-title menu-item-name">Pork Sisig with Rice</h5>
-              <p class="menu-item-price">₱ 175</p>
-           </div>
-          </div>
+        <div class="col reveal reveal-delay-2">
+          <button type="button" class="dish-card" data-bs-toggle="modal" data-bs-target="#modalChopsuey">
+            <img src="menu/chopsuey.jpg" alt="Chopsuey">
+            <span class="dish-card-body">
+              <span class="dish-card-name">Chopsuey</span>
+              <span class="dish-card-hint">View photo +</span>
+            </span>
+          </button>
         </div>
 
-        <div class="col">
-         <div class="card menu-card h-100">
-           <img src="menu/sizzlingchicken.jpg" class="card-img-top menu-card-img" alt="sizzlingchicken">
-             <div class="card-body menu-card-body">
-              <h5 class="card-title menu-item-name">Sizzling Chicken With Rice</h5>
-              <p class="menu-item-price">₱ 185</p>
-           </div>
-          </div>
+        <div class="col reveal reveal-delay-3">
+          <button type="button" class="dish-card" data-bs-toggle="modal" data-bs-target="#modalLumpia">
+            <img src="menu/lumpia.jpg" alt="Lumpiang Shanghai">
+            <span class="dish-card-body">
+              <span class="dish-card-name">Lumpiang Shanghai</span>
+              <span class="dish-card-hint">View photo +</span>
+            </span>
+          </button>
         </div>
 
-        <div class="col">
-         <div class="card menu-card h-100">
-           <img src="menu/tokwatbaboy.jpg" class="card-img-top menu-card-img" alt="tokwatbaboy">
-             <div class="card-body menu-card-body">
-              <h5 class="card-title menu-item-name">Tokwa't Baboy Small</h5>
-              <p class="menu-item-price">₱ 120</p>
-           </div>
-          </div>
+        <div class="col reveal">
+          <button type="button" class="dish-card" data-bs-toggle="modal" data-bs-target="#modalKarekare">
+            <img src="menu/karekare.jpg" alt="Kare-Kare">
+            <span class="dish-card-body">
+              <span class="dish-card-name">Kare-Kare</span>
+              <span class="dish-card-hint">View photo +</span>
+            </span>
+          </button>
         </div>
 
-        <div class="col">
-         <div class="card menu-card h-100">
-           <img src="menu/goto.jpg" class="card-img-top menu-card-img" alt="Goto">
-             <div class="card-body menu-card-body">
-              <h5 class="card-title menu-item-name">Goto</h5>
-              <p class="menu-item-price">₱ 140</p>
-           </div>
-          </div>
+        <div class="col reveal reveal-delay-1">
+          <button type="button" class="dish-card" data-bs-toggle="modal" data-bs-target="#modalFriedChicken">
+            <img src="menu/friedchicken.jpg" alt="Fried Chicken">
+            <span class="dish-card-body">
+              <span class="dish-card-name">Fried Chicken</span>
+              <span class="dish-card-hint">View photo +</span>
+            </span>
+          </button>
         </div>
 
-        <div class="col">
-         <div class="card menu-card h-100">
-           <img src="menu/gotowegg.jpg" class="card-img-top menu-card-img" alt="Goto">
-             <div class="card-body menu-card-body">
-              <h5 class="card-title menu-item-name">Goto With Egg</h5>
-              <p class="menu-item-price">₱ 140</p>
-           </div>
-          </div>
+        <div class="col reveal reveal-delay-2">
+          <button type="button" class="dish-card" data-bs-toggle="modal" data-bs-target="#modalPako">
+            <img src="menu/pacosalad.jpg" alt="Pako Salad">
+            <span class="dish-card-body">
+              <span class="dish-card-name">Pako Salad</span>
+              <span class="dish-card-hint">View photo +</span>
+            </span>
+          </button>
         </div>
 
-        <div class="col">
-         <div class="card menu-card h-100">
-           <img src="menu/lugawegg.jpg" class="card-img-top menu-card-img" alt="Lugaw">
-             <div class="card-body menu-card-body">
-              <h5 class="card-title menu-item-name">Lugaw With Egg</h5>
-              <p class="menu-item-price">₱ 89</p>
-           </div>
-          </div>
+        <div class="col reveal reveal-delay-3">
+          <button type="button" class="dish-card" data-bs-toggle="modal" data-bs-target="#modalBeefPares">
+            <img src="menu/beefpares.jpg" alt="Beef Pares">
+            <span class="dish-card-body">
+              <span class="dish-card-name">Beef Pares</span>
+              <span class="dish-card-hint">View photo +</span>
+            </span>
+          </button>
         </div>
 
       </div>
     </div>
   </section>
 
-<section class="full-menu">
-  <div class="container menu-content">
-    <p class="category-label">bubusuk</p>
-    <h2 class="category-title">
-      <span class="menu-heart">Full </span>
-      <span class="menu-span">Menu</span>
-    </h2>
-    <div class="full-menu-images">
-      <div class="full-menu-item">
-        <img src="menu/menu1.jpg" alt="menu">
+  <!-- Full Menu -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section-head section-head--center reveal">
+        <span class="eyebrow">bubusuk</span>
+        <h2 class="section-title">Full <span class="accent">Menu</span></h2>
+        <p class="section-lead">Swipe or use the arrows to browse every page.</p>
       </div>
-      <div class="full-menu-item">
-        <img src="menu/menu2.jpg" alt="menu">
+
+      <div class="full-menu-frame reveal">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Menu page 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Menu page 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Menu page 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="menu/menu1.jpg" class="d-block w-100 full-menu-img" alt="Bubusuk menu page 1">
+            </div>
+            <div class="carousel-item">
+              <img src="menu/menu2.jpg" class="d-block w-100 full-menu-img" alt="Bubusuk menu page 2">
+            </div>
+            <div class="carousel-item">
+              <img src="menu/menu3.jpg" class="d-block w-100 full-menu-img" alt="Bubusuk menu page 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
-      <div class="full-menu-item">
-        <img src="menu/menu3.jpg" alt="menu">
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══ MENU MODALS ═══ -->
+
+<!-- Sisig -->
+<div class="modal fade" id="modalSisig" tabindex="-1" aria-labelledby="modalSisigLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content menu-modal-content">
+      <div class="modal-header menu-modal-header">
+        <div>
+          <p class="menu-modal-label">BUBUSUK SIGNATURES</p>
+          <h5 class="modal-title menu-modal-title" id="modalSisigLabel">Sisig</h5>
+        </div>
+        <button type="button" class="btn-close menu-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <img src="menu/sisig.jpg" class="menu-modal-img" alt="Sisig">
       </div>
     </div>
   </div>
-</section>
-</main>
+</div>
 
-<!-- FOOTER-->
+<!-- Pancit Bihon -->
+<div class="modal fade" id="modalPancit" tabindex="-1" aria-labelledby="modalPancitLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content menu-modal-content">
+      <div class="modal-header menu-modal-header">
+        <div>
+          <p class="menu-modal-label">BUBUSUK SIGNATURES</p>
+          <h5 class="modal-title menu-modal-title" id="modalPancitLabel">Pancit Bihon</h5>
+        </div>
+        <button type="button" class="btn-close menu-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <img src="menu/pancitbihon.jpg" class="menu-modal-img" alt="Pancit Bihon">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chopsuey -->
+<div class="modal fade" id="modalChopsuey" tabindex="-1" aria-labelledby="modalChopsueyLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content menu-modal-content">
+      <div class="modal-header menu-modal-header">
+        <div>
+          <p class="menu-modal-label">BUBUSUK SIGNATURES</p>
+          <h5 class="modal-title menu-modal-title" id="modalChopsueyLabel">Chopsuey</h5>
+        </div>
+        <button type="button" class="btn-close menu-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <img src="menu/chopsuey.jpg" class="menu-modal-img" alt="Chopsuey">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lumpiang Shanghai -->
+<div class="modal fade" id="modalLumpia" tabindex="-1" aria-labelledby="modalLumpiaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content menu-modal-content">
+      <div class="modal-header menu-modal-header">
+        <div>
+          <p class="menu-modal-label">BUBUSUK SIGNATURES</p>
+          <h5 class="modal-title menu-modal-title" id="modalLumpiaLabel">Lumpiang Shanghai</h5>
+        </div>
+        <button type="button" class="btn-close menu-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <img src="menu/lumpia.jpg" class="menu-modal-img" alt="Lumpiang Shanghai">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Kare-Kare -->
+<div class="modal fade" id="modalKarekare" tabindex="-1" aria-labelledby="modalKarekareLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content menu-modal-content">
+      <div class="modal-header menu-modal-header">
+        <div>
+          <p class="menu-modal-label">BUBUSUK SIGNATURES</p>
+          <h5 class="modal-title menu-modal-title" id="modalKarekareLabel">Kare-Kare</h5>
+        </div>
+        <button type="button" class="btn-close menu-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <img src="menu/karekare.jpg" class="menu-modal-img" alt="Kare-Kare">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fried Chicken -->
+<div class="modal fade" id="modalFriedChicken" tabindex="-1" aria-labelledby="modalFriedChickenLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content menu-modal-content">
+      <div class="modal-header menu-modal-header">
+        <div>
+          <p class="menu-modal-label">BUBUSUK SIGNATURES</p>
+          <h5 class="modal-title menu-modal-title" id="modalFriedChickenLabel">Fried Chicken</h5>
+        </div>
+        <button type="button" class="btn-close menu-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <img src="menu/friedchicken.jpg" class="menu-modal-img" alt="Fried Chicken">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pako Salad -->
+<div class="modal fade" id="modalPako" tabindex="-1" aria-labelledby="modalPakoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content menu-modal-content">
+      <div class="modal-header menu-modal-header">
+        <div>
+          <p class="menu-modal-label">BUBUSUK SIGNATURES</p>
+          <h5 class="modal-title menu-modal-title" id="modalPakoLabel">Pako Salad</h5>
+        </div>
+        <button type="button" class="btn-close menu-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <img src="menu/pacosalad.jpg" class="menu-modal-img" alt="Pako Salad">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Beef Pares -->
+<div class="modal fade" id="modalBeefPares" tabindex="-1" aria-labelledby="modalBeefParesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content menu-modal-content">
+      <div class="modal-header menu-modal-header">
+        <div>
+          <p class="menu-modal-label">BUBUSUK SIGNATURES</p>
+          <h5 class="modal-title menu-modal-title" id="modalBeefParesLabel">Beef Pares</h5>
+        </div>
+        <button type="button" class="btn-close menu-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <img src="menu/beefpares.jpg" class="menu-modal-img" alt="Beef Pares">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-row">
-
-      <!-- Follow Us + Social Icons -->
-      <div class="social-icons-wrapper">
-        <span class="follow-us">bubusuk</span>
-        <ul class="list-inline social-icons">
-          <li class="list-inline-item">
-            <a href="https://www.facebook.com/BubusukGotoAnneCorner10">
-              <img src="social-media/facebook.svg" alt="Facebook">
-            </a>
-          </li>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-brand">bubusuk</a>
+        <p class="footer-tagline">Authentic Kapampangan flavors, umuusok sa sarap since 2004.</p>
+        <a class="footer-social" href="https://www.facebook.com/BubusukGotoAnneCorner10" target="_blank" rel="noopener">
+          <img src="social-media/facebook.svg" alt="">
+          Follow us on Facebook
+        </a>
+      </div>
+      <div>
+        <p class="footer-heading">Explore</p>
+        <ul class="footer-links">
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
+      <div>
+        <p class="footer-heading">Visit Us</p>
+        <ul class="footer-links">
+          <li>Main Branch — Lazatin<span>0927 774 8069</span></li>
+          <li>Northwalk 1, Jasa Road<span>0967 766 1749</span></li>
+          <li>San Matias, Sto. Tomas<span>0975 443 1416</span></li>
+        </ul>
+      </div>
+    </div>
 
-      <!-- Rights text on the right -->
+    <div class="footer-bottom">
       <p class="footer-rights">© 2026 Bubusuk Restaurant. All rights reserved.</p>
+      <p class="footer-dev">Designed and developed by: Gomez - De Jesus - Quiwa - Deroña</p>
+      <div class="footer-school-links">
+        <a href="https://web.ua.edu.ph/" target="_blank" rel="noopener" class="footer-school-link">University of the Assumption</a>
+        <span class="footer-divider">—</span>
+        <a href="https://ua-cit.com/" target="_blank" rel="noopener" class="footer-school-link">College of Information Technology</a>
+      </div>
     </div>
   </div>
 </footer>
-
-
-
-
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>
